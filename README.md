@@ -1,2 +1,2 @@
-# keylogger
-Simple keylogger in C++
+# Keylogger
+Simple keylogger in C++.
